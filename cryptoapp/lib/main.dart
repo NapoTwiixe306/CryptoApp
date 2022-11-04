@@ -22,6 +22,16 @@ class CryptoExt extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            const Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/logo.jpeg'),
+                radius: 40.0,
+              ),
+            ),
+            Divider(
+              height: 90.0,
+              color: Colors.grey[800],
+            ),
             Text(
               'Name',
               style: TextStyle(
@@ -62,6 +72,23 @@ class CryptoExt extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30.0),
+            Row(
+              children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10.0),
+                Text(
+                  'julien.milants@gmail.com',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 18.0,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
