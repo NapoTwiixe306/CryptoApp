@@ -1,6 +1,9 @@
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:cryptoapp/theme/colors.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 class RootApp extends StatefulWidget {
   const RootApp({super.key});
@@ -11,75 +14,49 @@ class RootApp extends StatefulWidget {
 
 class _RootAppState extends State<RootApp> {
   int pageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: getAppBar(),
-      //backgroundColor: Colors.black,
-      bottomNavigationBar: getFooter(),
-    );
+        backgroundColor: white,
+        bottomNavigationBar: getFooter(),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              selectedTab(4);
+            },
+            child: Icon(
+              AntDesign.creditcard,
+              size: 25,
+            ),
+            backgroundColor: primary
+            //params
+            ),
+        floatingActionButtonLocation:
+            FloatingActionButtonLocation.centerDocked);
   }
 
-  getAppBar() {
-    if (pageIndex == 0) {
-      return AppBar(
-        backgroundColor: appBarColor,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            const Text(
-              "CryptoExtension",
-              style: TextStyle(
-                color: Colors.orange,
-                fontSize: 25,
-              ),
-            ),
-            SvgPicture.asset(
-              "assets/images/message_icon.svg",
-              width: 30,
-            ),
-          ],
-        ),
-      );
-    }
-  }
-
-  Widget getFooter() {
-    List bottomItems = [
-      pageIndex == 0
-          ? "assets/images/home_active_icon.svg"
-          : "assets/images/home_icon.svg",
-      pageIndex == 1
-          ? "assets/images/search_active_icon.svg"
-          : "assets/images/search_icon.svg",
-      pageIndex == 2
-          ? "assets/images/upload_active_icon.svg"
-          : "assets/images/upload_icon.svg",
-      pageIndex == 3
-          ? "assets/images/account_active_icon.svg"
-          : "assets/images/account_icon.svg",
+  getFooter() {
+    List<IconData> iconsItems = [
+      MaterialCommunityIcons.view_grid,
+      MaterialCommunityIcons.comment,
+      MaterialCommunityIcons.bell,
+      MaterialCommunityIcons.account_circle,
     ];
-    return Container(
-      width: double.infinity,
-      height: 80,
-      decoration: const BoxDecoration(color: appFooterColor),
-      child: Padding(
-        padding:
-            const EdgeInsets.only(left: 20, right: 20, bottom: 20, top: 15),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: List.generate(bottomItems.length, (index) {
-            return InkWell(
-                onTap: () {
-                  selectedTab(index);
-                },
-                child: SvgPicture.asset(
-                  bottomItems[index],
-                  width: 27,
-                ));
-          }),
-        ),
-      ),
+    return AnimatedBottomNavigationBar(
+      activeColor: primary,
+      splashColor: secondary,
+      inactiveColor: Colors.black.withOpacity(0.5),
+      icons: iconsItems,
+      activeIndex: pageIndex,
+      gapLocation: GapLocation.center,
+      notchSmoothness: NotchSmoothness.softEdge,
+      leftCornerRadius: 10,
+      iconSize: 25,
+      rightCornerRadius: 10,
+      onTap: (index) {
+        selectedTab(index);
+      },
+      //other params
     );
   }
 
