@@ -27,10 +27,6 @@ class _RootAppState extends State<RootApp> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            SvgPicture.asset(
-              "assets/images/camera_icon.svg",
-              width: 30,
-            ),
             const Text(
               "CryptoExtension",
               style: TextStyle(
