@@ -30,6 +30,7 @@ class _RootAppState extends State<RootApp> {
             const Text(
               "CryptoExtension",
               style: TextStyle(
+                color: Colors.orange,
                 fontSize: 25,
               ),
             ),
