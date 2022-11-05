@@ -1,4 +1,5 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:cryptoapp/pages/dashboard_page.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -20,19 +21,65 @@ class _RootAppState extends State<RootApp> {
     return Scaffold(
         backgroundColor: white,
         bottomNavigationBar: getFooter(),
+        body: getBody(),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
               selectedTab(4);
             },
-            child: Icon(
+            backgroundColor: primary,
+            child: const Icon(
               AntDesign.creditcard,
               size: 25,
-            ),
-            backgroundColor: primary
+            )
             //params
             ),
         floatingActionButtonLocation:
             FloatingActionButtonLocation.centerDocked);
+  }
+
+  getBody() {
+    return IndexedStack(
+      index: pageIndex,
+      children: const [
+        DashbaordPage(),
+        Center(
+          child: Text(
+            "Chat Page",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        Center(
+          child: Text(
+            "Notification Page",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        Center(
+          child: Text(
+            "Account Page",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        Center(
+          child: Text(
+            "Card Page",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ],
+    );
   }
 
   getFooter() {
