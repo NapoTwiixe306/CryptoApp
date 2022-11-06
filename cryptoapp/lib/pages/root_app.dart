@@ -1,5 +1,6 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:cryptoapp/pages/dashboard_page.dart';
+import 'package:cryptoapp/pages/Home_page.dart';
+import 'package:cryptoapp/pages/Message_page.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -22,6 +23,7 @@ class _RootAppState extends State<RootApp> {
     return Scaffold(
         appBar: getAppBar(),
         backgroundColor: white,
+        body: getBody(),
         bottomNavigationBar: getFooter(),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
@@ -38,6 +40,38 @@ class _RootAppState extends State<RootApp> {
             FloatingActionButtonLocation.centerDocked);
   }
 
+  Widget getBody() {
+    List<Widget> pages = [
+      const HomePage(),
+      const MessagePage(),
+      const Center(
+        child: Text(
+          "Notification Page",
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: primary),
+        ),
+      ),
+      const Center(
+        child: Text(
+          "profile Page",
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: primary),
+        ),
+      ),
+      const Center(
+        child: Text(
+          "Card Page",
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.bold, color: primary),
+        ),
+      )
+    ];
+    return IndexedStack(
+      index: pageIndex,
+      children: pages,
+    );
+  }
+
   getAppBar() {
     if (pageIndex == 0) {
       return AppBar(
@@ -50,7 +84,7 @@ class _RootAppState extends State<RootApp> {
               "CryptoExtension",
               style: TextStyle(
                 color: Colors.orange,
-                fontSize: 35,
+                fontSize: 25,
               ),
             ),
           ],
@@ -59,8 +93,19 @@ class _RootAppState extends State<RootApp> {
     } else if (pageIndex == 1) {
       return AppBar(
         elevation: 0,
-        backgroundColor: primary,
-        title: const Text("Message"),
+        backgroundColor: white,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[
+            Text(
+              "Message",
+              style: TextStyle(
+                color: Colors.amber,
+                fontSize: 25,
+              ),
+            ),
+          ],
+        ),
       );
     } else if (pageIndex == 2) {
       return AppBar(
