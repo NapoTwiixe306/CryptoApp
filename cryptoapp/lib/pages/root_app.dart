@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class RootApp extends StatefulWidget {
   const RootApp({super.key});
@@ -19,9 +20,9 @@ class _RootAppState extends State<RootApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: getAppBar(),
         backgroundColor: white,
         bottomNavigationBar: getFooter(),
-        body: getBody(),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
               selectedTab(4);
@@ -37,49 +38,49 @@ class _RootAppState extends State<RootApp> {
             FloatingActionButtonLocation.centerDocked);
   }
 
-  getBody() {
-    return IndexedStack(
-      index: pageIndex,
-      children: const [
-        DashbaordPage(),
-        Center(
-          child: Text(
-            "Chat Page",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+  getAppBar() {
+    if (pageIndex == 0) {
+      return AppBar(
+        elevation: 0,
+        backgroundColor: appBarColor,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const <Widget>[
+            Text(
+              "CryptoExtension",
+              style: TextStyle(
+                color: Colors.orange,
+                fontSize: 35,
+              ),
             ),
-          ),
+          ],
         ),
-        Center(
-          child: Text(
-            "Notification Page",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        Center(
-          child: Text(
-            "Account Page",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-        Center(
-          child: Text(
-            "Card Page",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
-      ],
-    );
+      );
+    } else if (pageIndex == 1) {
+      return AppBar(
+        elevation: 0,
+        backgroundColor: primary,
+        title: const Text("Message"),
+      );
+    } else if (pageIndex == 2) {
+      return AppBar(
+        elevation: 0,
+        backgroundColor: primary,
+        title: const Text("Notifications"),
+      );
+    } else if (pageIndex == 3) {
+      return AppBar(
+        elevation: 0,
+        backgroundColor: primary,
+        title: const Text("Profile"),
+      );
+    } else {
+      return AppBar(
+        elevation: 0,
+        backgroundColor: primary,
+        title: const Text("Card"),
+      );
+    }
   }
 
   getFooter() {
