@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:cryptoapp/pages/Home_page.dart';
 import 'package:cryptoapp/pages/Message_page.dart';
+import 'package:cryptoapp/pages/Notification_Page.dart';
 import 'package:cryptoapp/pages/card_page.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/material.dart';
@@ -45,13 +46,7 @@ class _RootAppState extends State<RootApp> {
     List<Widget> pages = [
       const HomePage(),
       const MessagePage(),
-      const Center(
-        child: Text(
-          "Notification Page",
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: primary),
-        ),
-      ),
+      const BellPage(),
       const Center(
         child: Text(
           "profile Page",
@@ -103,17 +98,9 @@ class _RootAppState extends State<RootApp> {
         ),
       );
     } else if (pageIndex == 2) {
-      return AppBar(
-        elevation: 0,
-        backgroundColor: primary,
-        title: const Text("Notifications"),
-      );
+      return null;
     } else if (pageIndex == 3) {
-      return AppBar(
-        elevation: 0,
-        backgroundColor: primary,
-        title: const Text("Profile"),
-      );
+      return null;
     } else {
       return null;
     }
