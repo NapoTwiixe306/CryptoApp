@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:cryptoapp/pages/Home_page.dart';
 import 'package:cryptoapp/pages/Message_page.dart';
+import 'package:cryptoapp/pages/card_page.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -58,13 +59,7 @@ class _RootAppState extends State<RootApp> {
               fontSize: 20, fontWeight: FontWeight.bold, color: primary),
         ),
       ),
-      const Center(
-        child: Text(
-          "Card Page",
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: primary),
-        ),
-      )
+      const CardPage(),
     ];
     return IndexedStack(
       index: pageIndex,
@@ -120,11 +115,7 @@ class _RootAppState extends State<RootApp> {
         title: const Text("Profile"),
       );
     } else {
-      return AppBar(
-        elevation: 0,
-        backgroundColor: primary,
-        title: const Text("Card"),
-      );
+      return null;
     }
   }
 

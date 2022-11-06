@@ -12,8 +12,6 @@ class MessagePage extends StatefulWidget {
 }
 
 class _MessagePageState extends State<MessagePage> {
-  int pageIndex = 2;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
