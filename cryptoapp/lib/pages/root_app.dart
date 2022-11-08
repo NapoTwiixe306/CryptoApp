@@ -59,22 +59,7 @@ class _RootAppState extends State<RootApp> {
 
   getAppBar() {
     if (pageIndex == 0) {
-      return AppBar(
-        elevation: 0,
-        backgroundColor: appBarColor,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              "CryptoExtension",
-              style: TextStyle(
-                color: Colors.orange,
-                fontSize: 25,
-              ),
-            ),
-          ],
-        ),
-      );
+      return null;
     } else if (pageIndex == 1) {
       return null;
     } else if (pageIndex == 2) {
