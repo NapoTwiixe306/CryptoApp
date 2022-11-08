@@ -3,6 +3,7 @@ import 'package:cryptoapp/pages/Home_page.dart';
 import 'package:cryptoapp/pages/Message_page.dart';
 import 'package:cryptoapp/pages/Notification_Page.dart';
 import 'package:cryptoapp/pages/card_page.dart';
+import 'package:cryptoapp/pages/profile_page.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -47,13 +48,7 @@ class _RootAppState extends State<RootApp> {
       const HomePage(),
       const MessagePage(),
       const BellPage(),
-      const Center(
-        child: Text(
-          "profile Page",
-          style: TextStyle(
-              fontSize: 20, fontWeight: FontWeight.bold, color: primary),
-        ),
-      ),
+      const ProfilePage(),
       const CardPage(),
     ];
     return IndexedStack(

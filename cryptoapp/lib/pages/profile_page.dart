@@ -1,3 +1,4 @@
+import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -19,10 +20,41 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   getAppBar() {
-    return AppBar();
+    return AppBar(
+      elevation: 0,
+      backgroundColor: appBarColor,
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          Text(
+            "Profile Page",
+            style: TextStyle(
+              color: Colors.orange,
+              fontSize: 25,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget getBody() {
-    return SingleChildScrollView();
+    return SingleChildScrollView(
+      child: Column(
+        children: const [
+          Align(
+            alignment: Alignment.center,
+            child: Text(
+              "Test",
+              style: TextStyle(
+                color: Colors.amber,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
