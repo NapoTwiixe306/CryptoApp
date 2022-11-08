@@ -29,16 +29,16 @@ class _RootAppState extends State<RootApp> {
         body: getBody(),
         bottomNavigationBar: getFooter(),
         floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              selectedTab(4);
-            },
-            backgroundColor: primary,
-            child: const Icon(
-              AntDesign.creditcard,
-              size: 25,
-            )
-            //params
-            ),
+          onPressed: () {
+            selectedTab(4);
+          },
+          backgroundColor: primary,
+          child: const Icon(
+            AntDesign.creditcard,
+            size: 25,
+          ),
+          //params
+        ),
         floatingActionButtonLocation:
             FloatingActionButtonLocation.centerDocked);
   }

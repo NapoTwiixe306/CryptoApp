@@ -16,6 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: primary,
       appBar: PreferredSize(
         child: getAppBar(),
         preferredSize: Size.fromHeight(60),
@@ -34,6 +35,18 @@ class _HomePageState extends State<HomePage> {
           backgroundImage: NetworkImage(
               "https://scontent-bru2-1.xx.fbcdn.net/v/t1.15752-9/259971425_409829030844522_5949259463600386762_n.jpg?stp=dst-jpg_p403x403&_nc_cat=103&ccb=1-7&_nc_sid=aee45a&_nc_ohc=QVpzWmCDIK8AX91zFxA&_nc_ht=scontent-bru2-1.xx&oh=03_AdRCuRmxgwJVrnMMXW5PjVNnpSmRFRv5PglOFJ73WOTNWw&oe=63920F49"),
         ),
+      ),
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          Text(
+            "CryptoExtension",
+            style: TextStyle(
+              color: Colors.orange,
+              fontSize: 25,
+            ),
+          ),
+        ],
       ),
       actions: [
         IconButton(
