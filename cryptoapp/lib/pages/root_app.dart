@@ -76,22 +76,7 @@ class _RootAppState extends State<RootApp> {
         ),
       );
     } else if (pageIndex == 1) {
-      return AppBar(
-        elevation: 0,
-        backgroundColor: white,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              "Message",
-              style: TextStyle(
-                color: Colors.amber,
-                fontSize: 25,
-              ),
-            ),
-          ],
-        ),
-      );
+      return null;
     } else if (pageIndex == 2) {
       return null;
     } else if (pageIndex == 3) {

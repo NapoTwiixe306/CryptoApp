@@ -15,7 +15,27 @@ class _MessagePageState extends State<MessagePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: getAppBar(),
       body: getBody(),
+    );
+  }
+
+  getAppBar() {
+    return AppBar(
+      elevation: 0,
+      backgroundColor: white,
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          Text(
+            "AppBar",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 25,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
