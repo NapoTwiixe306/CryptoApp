@@ -66,10 +66,10 @@ class _HomePageState extends State<HomePage> {
         Container(
           width: double.infinity,
           height: size.height * 0.25,
-          decoration: BoxDecoration(color: primary),
+          decoration: const BoxDecoration(color: primary),
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: 110,
                 child: SingleChildScrollView(
@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                     children: List.generate(balanceLists.length, (index) {
                       return Padding(
                         padding: const EdgeInsets.only(right: 20),
-                        child: Container(
+                        child: SizedBox(
                           width: size.width * 0.7,
                           child: Column(
                             // crossAxisAlignment: CrossAxisAlignment.end,
@@ -96,11 +96,11 @@ class _HomePageState extends State<HomePage> {
                                           fontSize: 17,
                                           color: index == 0
                                               ? white
-                                              : white.withOpacity(0.5),
+                                              : white.withOpacity(1),
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 5,
                                   ),
                                   Text(
@@ -109,19 +109,19 @@ class _HomePageState extends State<HomePage> {
                                         fontSize: 35,
                                         color: index == 0
                                             ? white
-                                            : white.withOpacity(0.5),
+                                            : white.withOpacity(1),
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 8,
                               ),
                               Text(
                                 balanceLists[index]['description'],
                                 style: TextStyle(
                                   fontSize: 15,
-                                  color: white.withOpacity(0.5),
+                                  color: white.withOpacity(0.8),
                                 ),
                               ),
                             ],
@@ -133,11 +133,11 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Expanded(
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   child: Row(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       Flexible(
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                           decoration: BoxDecoration(
                               color: secondary.withOpacity(0.3),
                               borderRadius: BorderRadius.circular(12)),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Add money",
                               style: TextStyle(
@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       Flexible(
@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                           decoration: BoxDecoration(
                               color: secondary.withOpacity(0.3),
                               borderRadius: BorderRadius.circular(12)),
-                          child: Center(
+                          child: const Center(
                             child: Text(
                               "Exchange",
                               style: TextStyle(
@@ -173,7 +173,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                     ],
@@ -187,11 +187,13 @@ class _HomePageState extends State<HomePage> {
           child: SingleChildScrollView(
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(
-                  color: white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(25),
-                      topRight: Radius.circular(25))),
+              decoration: const BoxDecoration(
+                color: white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(25),
+                  topRight: Radius.circular(25),
+                ),
+              ),
               child: getAccountSection(),
             ),
           ),
@@ -206,11 +208,11 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "Accounts",
             style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Container(
@@ -242,7 +244,7 @@ class _HomePageState extends State<HomePage> {
                             decoration: BoxDecoration(
                                 color: secondary.withOpacity(0.3),
                                 borderRadius: BorderRadius.circular(12)),
-                            child: Center(
+                            child: const Center(
                               child: Icon(
                                 AntDesign.wallet,
                                 color: primary,
@@ -250,31 +252,31 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 15,
                           ),
-                          Text(
+                          const Text(
                             "40832-810-5-7000-012345",
                             style: TextStyle(fontSize: 15),
                           )
                         ],
                       ),
-                      Icon(
+                      const Icon(
                         Icons.keyboard_arrow_down,
                         color: primary,
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 50),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 50),
                     child: Divider(
                       thickness: 0.2,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
@@ -293,11 +295,11 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
-                      Text(
-                        "18 199.24 EUR",
+                      const Text(
+                        "21 021.43 EUR",
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w600),
                       )
