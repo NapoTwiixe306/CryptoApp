@@ -76,7 +76,7 @@ class _RootAppState extends State<RootApp> {
       MaterialCommunityIcons.view_grid,
       MaterialCommunityIcons.comment,
       MaterialCommunityIcons.bell,
-      MaterialCommunityIcons.account_circle,
+      MaterialCommunityIcons.settings
     ];
     return AnimatedBottomNavigationBar(
       activeColor: primary,
