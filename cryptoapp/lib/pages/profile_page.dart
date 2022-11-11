@@ -150,7 +150,6 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(
             height: 10,
           ),
-          const PassPage(),
           buildNotificationOption("Theme Dark", valNotify1, onChangeFunction1),
           buildNotificationOption("Account", valNotify2, onChangeFunction2),
           buildNotificationOption("Opportunity", valNotify3, onChangeFunction3),
@@ -196,12 +195,13 @@ class _ProfilePageState extends State<ProfilePage> {
           Transform.scale(
             scale: 0.7,
             child: CupertinoSwitch(
-                activeColor: Colors.blue,
-                trackColor: Colors.grey,
-                value: value,
-                onChanged: (bool newValue) {
-                  onChangeMethod(newValue);
-                }),
+              activeColor: Colors.blue,
+              trackColor: Colors.grey,
+              value: value,
+              onChanged: (bool newValue) {
+                onChangeMethod(newValue);
+              },
+            ),
           ),
         ],
       ),

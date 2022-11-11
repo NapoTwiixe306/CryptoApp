@@ -14,7 +14,7 @@ class SocialPage extends StatelessWidget {
               context: context,
               builder: (BuildContext context) {
                 return AlertDialog(
-                  title: const Text("Soial Test"),
+                  title: const Text("Soial"),
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: const [
@@ -39,7 +39,7 @@ class SocialPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
               Text(
-                "Social Test",
+                "Social",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
