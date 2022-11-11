@@ -1,5 +1,10 @@
 import 'dart:ui';
 
+import 'package:cryptoapp/pages/options/content.dart';
+import 'package:cryptoapp/pages/options/langue.dart';
+import 'package:cryptoapp/pages/options/pass.dart';
+import 'package:cryptoapp/pages/options/privacy.dart';
+import 'package:cryptoapp/pages/options/social.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -114,11 +119,11 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(
             height: 10,
           ),
-          buildAccountOption(context, "Change Password"),
-          buildAccountOption(context, "Content Settings"),
-          buildAccountOption(context, "Social"),
-          buildAccountOption(context, "Language"),
-          buildAccountOption(context, "Privacy & Security"),
+          const PassPage(),
+          const ContentPage(),
+          const SocialPage(),
+          const LanguePage(),
+          const PrivacyPage(),
           const SizedBox(height: 40),
           Row(
             children: const [
@@ -145,8 +150,9 @@ class _ProfilePageState extends State<ProfilePage> {
           const SizedBox(
             height: 10,
           ),
+          const PassPage(),
           buildNotificationOption("Theme Dark", valNotify1, onChangeFunction1),
-          buildNotificationOption("Accoutn", valNotify2, onChangeFunction2),
+          buildNotificationOption("Account", valNotify2, onChangeFunction2),
           buildNotificationOption("Opportunity", valNotify3, onChangeFunction3),
           const SizedBox(height: 50),
           Center(
@@ -200,53 +206,5 @@ class _ProfilePageState extends State<ProfilePage> {
         ],
       ),
     );
-  }
-
-  GestureDetector buildAccountOption(BuildContext context, String title) {
-    return GestureDetector(
-        onTap: () {
-          showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  title: Text(title),
-                  content: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Text("Option 1"),
-                      Text("Option 2"),
-                    ],
-                  ),
-                  actions: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: const Text("Close"),
-                    ),
-                  ],
-                );
-              });
-        },
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.grey,
-                ),
-              ),
-              const Icon(
-                Icons.arrow_forward_ios,
-                color: Colors.grey,
-              )
-            ],
-          ),
-        ));
   }
 }
