@@ -16,9 +16,32 @@ class PassPage extends StatelessWidget {
                   title: const Text("Settings"),
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Text("Test1"),
-                      Text("Option 2"),
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "Test1",
+                            textAlign: TextAlign.end,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 30,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "Option 2",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 30,
+                            ),
+                          ),
+                        ],
+                      )
                     ],
                   ),
                   actions: [
