@@ -8,73 +8,75 @@ class PassPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () {
-          showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return AlertDialog(
-                  title: const Text("Settings"),
-                  content: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: const [
-                          Text(
-                            "Test1",
-                            textAlign: TextAlign.end,
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 30,
-                            ),
-                          ),
-                        ],
+      onTap: () {
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: const Text("Settings"),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "Test1",
+                        textAlign: TextAlign.end,
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 30,
+                        ),
                       ),
-                      const Divider(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: const [
-                          Text(
-                            "Option 2",
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 30,
-                            ),
-                          ),
-                        ],
-                      )
                     ],
                   ),
-                  actions: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: const Text("Close"),
-                    ),
-                  ],
-                );
-              });
-        },
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text(
-                "Settings",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.grey,
-                ),
+                  const Divider(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "Option 2",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
               ),
-              Icon(
-                Icons.arrow_forward_ios,
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text("Close"),
+                ),
+              ],
+            );
+          },
+        );
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+            Text(
+              "Settings",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
                 color: Colors.grey,
-              )
-            ],
-          ),
-        ));
+              ),
+            ),
+            Icon(
+              Icons.arrow_forward_ios,
+              color: Colors.grey,
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

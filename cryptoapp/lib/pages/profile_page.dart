@@ -75,7 +75,54 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return AlertDialog(
+                  title: const Text("title"),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "Test1",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 25,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const Divider(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "Test2",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 25,
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: const Text("Close"),
+                    ),
+                  ],
+                );
+              },
+            );
+          },
           icon: const Icon(
             Icons.more_vert,
             color: black,
