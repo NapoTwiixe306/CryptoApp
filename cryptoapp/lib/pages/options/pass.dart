@@ -30,6 +30,7 @@ class PassPage extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const Divider(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const [
