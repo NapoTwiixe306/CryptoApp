@@ -37,7 +37,7 @@ class LanguePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const Divider(height: 1),
+                    const Divider(height: 1, thickness: 1),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -63,7 +63,13 @@ class LanguePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
-                    child: const Text("Close"),
+                    child: const Text(
+                      "Close",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                      ),
+                    ),
                   ),
                 ],
               );

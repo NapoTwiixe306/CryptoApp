@@ -137,7 +137,9 @@ class _CardPageState extends State<CardPage> {
                           decoration: BoxDecoration(
                             border: Border(
                               bottom: BorderSide(
-                                  color: black.withOpacity(0.05), width: 1),
+                                color: black.withOpacity(0.05),
+                                width: 1,
+                              ),
                             ),
                           ),
                           child: Center(
@@ -213,9 +215,7 @@ class _CardPageState extends State<CardPage> {
                     },
                   ),
                 ),
-                const SizedBox(
-                  height: 30,
-                )
+                const SizedBox(height: 30)
               ],
             ),
           ),

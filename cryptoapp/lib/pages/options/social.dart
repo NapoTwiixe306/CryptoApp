@@ -92,6 +92,30 @@ class SocialPage extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const Divider(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text(
+                              "Le Site",
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 150),
+                          const Icon(
+                            Icons.wechat_sharp,
+                            color: Colors.red,
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                   actions: [

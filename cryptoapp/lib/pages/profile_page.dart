@@ -5,6 +5,7 @@ import 'package:cryptoapp/pages/options/langue.dart';
 import 'package:cryptoapp/pages/options/pass.dart';
 import 'package:cryptoapp/pages/options/privacy.dart';
 import 'package:cryptoapp/pages/options/social.dart';
+import 'package:cryptoapp/pages/root_app.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -209,9 +210,12 @@ class _ProfilePageState extends State<ProfilePage> {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const RootApp()));
+              },
               child: const Text(
-                "Sign Out",
+                "Home",
                 style: TextStyle(
                   fontSize: 16,
                   letterSpacing: 2.2,
