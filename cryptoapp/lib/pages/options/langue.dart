@@ -17,9 +17,45 @@ class LanguePage extends StatelessWidget {
                 title: const Text("Language Test"),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    Text("French"),
-                    Text("English"),
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text(
+                            "French",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const Divider(height: 1),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text(
+                            "English",
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
                 actions: [

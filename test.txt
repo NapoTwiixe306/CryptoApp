@@ -1,0 +1,40 @@
+Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: const [
+                              Icon(
+                                FontAwesome.instagram,
+                                color: Colors.orange,
+                                size: 20,
+                              ),
+                            ],
+                          ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text(
+                              "Instagram",
+                              style: TextStyle(
+                                color: Colors.orange,
+                                fontSize: 20,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
