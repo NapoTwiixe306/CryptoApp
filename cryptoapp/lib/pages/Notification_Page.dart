@@ -56,52 +56,19 @@ class _BellPageState extends State<BellPage> {
   }
 
   Widget getBody() {
+    //var size = MediaQuery.of(context).size;
     return SingleChildScrollView(
-      child: Column(
+      child: Row(
         children: const [
-          Align(
-            alignment: Alignment.center,
-            child: Text(
-              "Notifications Page",
-              style: TextStyle(
-                color: primary,
-                fontSize: 30,
-              ),
+          Text(
+            "Test",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 25,
             ),
-          ),
+          )
         ],
       ),
     );
-  }
-
-  getFooter() {
-    List<IconData> iconsItems = [
-      MaterialCommunityIcons.view_grid,
-      MaterialCommunityIcons.comment,
-      MaterialCommunityIcons.bell,
-      MaterialCommunityIcons.settings
-    ];
-    return AnimatedBottomNavigationBar(
-      activeColor: primary,
-      splashColor: secondary,
-      inactiveColor: Colors.black.withOpacity(0.5),
-      icons: iconsItems,
-      activeIndex: pageIndex,
-      gapLocation: GapLocation.center,
-      notchSmoothness: NotchSmoothness.softEdge,
-      leftCornerRadius: 10,
-      iconSize: 25,
-      rightCornerRadius: 10,
-      onTap: (index) {
-        selectedTab(index);
-      },
-      //other params
-    );
-  }
-
-  selectedTab(index) {
-    setState(() {
-      pageIndex = index;
-    });
   }
 }
