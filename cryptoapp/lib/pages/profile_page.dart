@@ -1,10 +1,10 @@
 import 'dart:ui';
 
-import 'package:cryptoapp/pages/options/content.dart';
-import 'package:cryptoapp/pages/options/langue.dart';
-import 'package:cryptoapp/pages/options/pass.dart';
-import 'package:cryptoapp/pages/options/privacy.dart';
-import 'package:cryptoapp/pages/options/social.dart';
+import 'package:cryptoapp/pages/models/content.dart';
+import 'package:cryptoapp/pages/models/langue.dart';
+import 'package:cryptoapp/pages/models/pass.dart';
+import 'package:cryptoapp/pages/models/privacy.dart';
+import 'package:cryptoapp/pages/models/social.dart';
 import 'package:cryptoapp/pages/root_app.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/cupertino.dart';
