@@ -1,17 +1,20 @@
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:cryptoapp/pages/root_app.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 class BellPage extends StatefulWidget {
   const BellPage({super.key});
-
   @override
   State<BellPage> createState() => _BellPageState();
 }
 
 class _BellPageState extends State<BellPage> {
+  int pageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,5 +72,36 @@ class _BellPageState extends State<BellPage> {
         ],
       ),
     );
+  }
+
+  getFooter() {
+    List<IconData> iconsItems = [
+      MaterialCommunityIcons.view_grid,
+      MaterialCommunityIcons.comment,
+      MaterialCommunityIcons.bell,
+      MaterialCommunityIcons.settings
+    ];
+    return AnimatedBottomNavigationBar(
+      activeColor: primary,
+      splashColor: secondary,
+      inactiveColor: Colors.black.withOpacity(0.5),
+      icons: iconsItems,
+      activeIndex: pageIndex,
+      gapLocation: GapLocation.center,
+      notchSmoothness: NotchSmoothness.softEdge,
+      leftCornerRadius: 10,
+      iconSize: 25,
+      rightCornerRadius: 10,
+      onTap: (index) {
+        selectedTab(index);
+      },
+      //other params
+    );
+  }
+
+  selectedTab(index) {
+    setState(() {
+      pageIndex = index;
+    });
   }
 }

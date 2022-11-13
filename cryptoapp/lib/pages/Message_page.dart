@@ -133,9 +133,9 @@ class _MessagePageState extends State<MessagePage> {
               child: IconButton(
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const BellPage()));
+                    context,
+                    MaterialPageRoute(builder: (context) => const BellPage()),
+                  );
                 },
                 icon: Badge(
                   badgeColor: primary,
