@@ -1,3 +1,4 @@
+import 'package:cryptoapp/pages/root_app.dart';
 import 'package:cryptoapp/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -22,19 +23,32 @@ class _BellPageState extends State<BellPage> {
   getAppBar() {
     return AppBar(
       elevation: 0,
-      backgroundColor: appBarColor,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: const <Widget>[
-          Text(
-            "notif",
-            style: TextStyle(
-              color: Colors.orange,
-              fontSize: 25,
-            ),
-          ),
-        ],
+      backgroundColor: primary,
+      leading: IconButton(
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const RootApp()));
+        },
+        icon: const Icon(
+          Icons.arrow_back_ios_new,
+          color: black,
+          size: 22,
+        ),
       ),
+      title: const Text(
+        "CryptoExtension",
+        style: TextStyle(fontSize: 25, color: black),
+      ),
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.more_vert,
+            color: black,
+            size: 25,
+          ),
+        ),
+      ],
     );
   }
 

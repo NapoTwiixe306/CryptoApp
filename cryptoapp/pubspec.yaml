@@ -39,6 +39,8 @@ dependencies:
   flutter_svg:
   animated_bottom_navigation_bar:
   flutter_icons:
+  badges: ^2.0.3
+  line_icons: ^2.0.0
 
 
 dev_dependencies:
