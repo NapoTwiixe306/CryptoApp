@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, TouchableOpacity } from 'react-native'
+import { Text, View } from 'react-native'
 import { styles } from './HeaderStyle'
 import { Link } from 'expo-router'
 export default function Header() {
