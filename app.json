@@ -8,6 +8,8 @@
       "expo-router"
     ],
     "name": "CryptoApp",
-    "slug": "CryptoApp"
+    "slug": "CryptoApp",
+    "backgroundColor": "#20232a",
+    "color": "white"
   }
 }
