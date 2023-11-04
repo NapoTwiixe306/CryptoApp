@@ -1,16 +1,13 @@
-import { useState } from "react";
-import { StyleSheet, Text, View  } from "react-native";
-import Header from "./Components/Header/Header";
-import { Link } from "expo-router";
+import React from 'react';
+import Header from './Components/Header/Header';
+import { NavigationContainer } from '@react-navigation/native';
 
+import { View } from 'react-native';
 
-export default function Page() {
-  
-  
+export default function App() {
   return (
-    <View >
-        <Header/>
-
-    </View>
+    <NavigationContainer independent={true}>
+      <Header />
+    </NavigationContainer>
   );
-};
+}

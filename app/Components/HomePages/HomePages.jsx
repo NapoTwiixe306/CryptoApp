@@ -6,7 +6,6 @@ export default function HomePages() {
   return (
     <View>
       <Text>HomePages</Text>
-      <Link href="/Components/Contact/Contact">Contact</Link>
 
     </View>
   )
