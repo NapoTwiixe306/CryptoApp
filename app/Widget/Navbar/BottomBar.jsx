@@ -7,7 +7,7 @@ import styles from './BottomBarStyle';
 
 export default function BottomBar() {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
       <Link style={styles.tab} href="/Components/HomePages/HomePages">
         <Text style={[styles.tabText, { textAlign: 'center' }]}>Home</Text>
       </Link>
@@ -16,6 +16,9 @@ export default function BottomBar() {
       </Link>
       <Link style={styles.tab} href="/Components/About/About">
         <Text style={[styles.tabText, { textAlign: 'center' }]}>About</Text>
+      </Link>
+      <Link style={styles.tab} href="/ComponentsLogin/Login">
+        <Text style={[styles.tabText, { textAlign: 'center' }]}>Login</Text>
       </Link>
     </View>
   );

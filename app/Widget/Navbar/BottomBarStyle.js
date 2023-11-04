@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 100,
+    height: 80,
     backgroundColor: 'white',
     position: 'absolute',
     bottom: 0,
@@ -15,13 +15,19 @@ const styles = StyleSheet.create({
   },
   tab: {
     flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
   },
   tabContent: {
+    flex: 1,
+
     alignItems: 'center',
     justifyContent: 'center',
   },
   tabText: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
     color: 'black',
     textAlign: 'center',
   },
