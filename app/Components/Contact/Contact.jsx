@@ -1,11 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import BottomBar from '../../Widget/Navbar/BottomBar'
 
 export default function Contact() {
   return (
-    <View>
-      <Text>Pied</Text>
-    </View>
+    <>
+      <BottomBar/>
+      <View>
+        <Text>Pied</Text>
+      </View>
+    </>
   )
 }
 

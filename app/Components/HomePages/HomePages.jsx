@@ -1,13 +1,16 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Link } from 'expo-router'
+import BottomBar from '../../Widget/Navbar/BottomBar'
 
 export default function HomePages() {
   return (
-    <View>
-      <Text>HomePages</Text>
-
-    </View>
+    <>
+      <BottomBar/>
+      <View>
+        <Text>HomePages</Text>
+      </View>
+    </>
   )
 }
 
