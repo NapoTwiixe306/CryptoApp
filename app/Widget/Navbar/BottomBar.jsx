@@ -8,7 +8,7 @@ import styles from './BottomBarStyle';
 export default function BottomBar() {
   return (
     <View style={styles.container}>
-      <Link style={styles.tab} href="/Components/Header/Header">
+      <Link style={styles.tab} href="/Components/HomePages/HomePages">
         <Text style={[styles.tabText, { textAlign: 'center' }]}>Home</Text>
       </Link>
       <Link style={styles.tab} href="/Components/Contact/Contact">
