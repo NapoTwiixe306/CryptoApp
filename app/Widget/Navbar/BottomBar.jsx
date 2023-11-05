@@ -19,16 +19,16 @@ export default function BottomBar() {
           <Text style={styles.tabText}>Contact</Text>
         </View>
       </Link>
-      <Link style={styles.tab} href="/Components/About/About">
-        <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
-          <FontAwesome name="info-circle" size={24} style={styles.icon} />
-          <Text style={styles.tabText}>About</Text>
-        </View>
-      </Link>
       <Link style={styles.tab} href="/Components/Login/Login">
         <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
           <FontAwesome name="user" size={24} style={styles.icon} />
           <Text style={styles.tabText}>Login</Text>
+        </View>
+      </Link>
+      <Link style={styles.tab} href="/Components/Settings/Settings">
+        <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
+          <FontAwesome name="cog" size={24} style={styles.icon} />
+          <Text style={styles.tabText}>Settings</Text>
         </View>
       </Link>
     </View>
