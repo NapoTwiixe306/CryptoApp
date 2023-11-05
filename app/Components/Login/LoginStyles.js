@@ -37,9 +37,8 @@ const styles = StyleSheet.create({
     top: 50,
   },
   text: {
-    flexDirection: "column",
-    color: "white",
-  },
+    color: 'white'
+  }
 });
 
 export default styles;
