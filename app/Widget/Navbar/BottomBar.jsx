@@ -1,24 +1,35 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { Link } from 'expo-router';
 import { FontAwesome } from '@expo/vector-icons';
-
 import styles from './BottomBarStyle';
 
 export default function BottomBar() {
   return (
-    <View style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
+    <View style={styles.container}>
       <Link style={styles.tab} href="/Components/HomePages/HomePages">
-        <Text style={[styles.tabText, { textAlign: 'center' }]}>Home</Text>
+        <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
+          <FontAwesome name="home" size={24} style={styles.icon} />
+          <Text style={styles.tabText}>Home</Text>
+        </View>
       </Link>
       <Link style={styles.tab} href="/Components/Contact/Contact">
-        <Text style={[styles.tabText, { textAlign: 'center' }]}>Contact</Text>
+        <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
+          <FontAwesome name="phone" size={24} style={styles.icon} />
+          <Text style={styles.tabText}>Contact</Text>
+        </View>
       </Link>
       <Link style={styles.tab} href="/Components/About/About">
-        <Text style={[styles.tabText, { textAlign: 'center' }]}>About</Text>
+        <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
+          <FontAwesome name="info-circle" size={24} style={styles.icon} />
+          <Text style={styles.tabText}>About</Text>
+        </View>
       </Link>
-      <Link style={styles.tab} href="/ComponentsLogin/Login">
-        <Text style={[styles.tabText, { textAlign: 'center' }]}>Login</Text>
+      <Link style={styles.tab} href="/Components/Login/Login">
+        <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
+          <FontAwesome name="user" size={24} style={styles.icon} />
+          <Text style={styles.tabText}>Login</Text>
+        </View>
       </Link>
     </View>
   );

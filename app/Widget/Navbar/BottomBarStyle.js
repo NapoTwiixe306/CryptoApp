@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
     height: 80,
     backgroundColor: 'white',
@@ -16,25 +16,21 @@ const styles = StyleSheet.create({
   tab: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
   },
   tabContent: {
-    flex: 1,
-
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   tabText: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginLeft: 30,
     color: 'black',
     textAlign: 'center',
   },
   icon: {
+    marginLeft: 30,
     color: 'black',
-    fontSize: 25
-  },
+    fontSize: 24,
+    justifyContent: 'center', // Centrer l'icône verticalement dans son conteneur
+  }
 });
-
 export default styles;
