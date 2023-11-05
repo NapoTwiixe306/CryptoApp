@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 import React from 'react'
-import { Link } from 'expo-router'
+import styles from './HomePagesStyle'
 import BottomBar from '../../Widget/Navbar/BottomBar'
 
 export default function HomePages() {
@@ -8,10 +8,8 @@ export default function HomePages() {
     <>
       <BottomBar/>
       <View>
-        <Text>HomePages</Text>
+        <Text style={styles.title}>HomePages</Text>
       </View>
     </>
   )
 }
-
-const styles = StyleSheet.create({})
