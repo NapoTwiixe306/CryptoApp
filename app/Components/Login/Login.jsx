@@ -7,7 +7,6 @@ export default function Login() {
   const [password, setPassword] = useState("");
   return (
     <>
-      <BottomBar />
       <View style={styles.parent}>
         <View style={styles.container}>
           <Text style={styles.title}>Login</Text>
@@ -27,6 +26,7 @@ export default function Login() {
           <Text style={styles.text}>Password: {password}</Text>
         </View>
       </View>
+      <BottomBar />
     </>
   );
 }
