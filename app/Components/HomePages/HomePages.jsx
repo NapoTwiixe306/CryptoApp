@@ -1,7 +1,7 @@
-import { Text, View, ScrollView } from 'react-native'
-import React from 'react'
-import styles from './HomePagesStyle'
-import BottomBar from '../../Widget/Navbar/BottomBar'
+import { Text, View, ScrollView } from "react-native";
+import React from "react";
+import styles from "./HomePagesStyle";
+import BottomBar from "../../Widget/Navbar/BottomBar";
 
 export default function HomePages() {
   return (
@@ -13,7 +13,7 @@ export default function HomePages() {
           </View>
         </View>
       </ScrollView>
-      <BottomBar/>
+      <BottomBar />
     </>
-  )
+  );
 }
