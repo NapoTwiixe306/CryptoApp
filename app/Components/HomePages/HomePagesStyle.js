@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'red',
         height: 200,
         width: 380,
-        borderRadius: 15
+        borderRadius: 15,
+        shadowColor: 'white'
     },  
     title: {
         color: 'white',

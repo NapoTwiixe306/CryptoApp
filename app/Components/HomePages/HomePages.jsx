@@ -9,7 +9,7 @@ export default function HomePages() {
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.parent}>
           <View style={styles.container}>
-            <Text style={styles.title}>Test</Text>
+            <Text style={styles.title}>CryptoExtension</Text>
           </View>
         </View>
       </ScrollView>
