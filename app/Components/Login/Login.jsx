@@ -1,4 +1,4 @@
-import { Text, View, TextInput, Button } from "react-native";
+import { Text, View, TextInput } from "react-native";
 import React, { useState } from "react";
 import BottomBar from "../../Widget/Navbar/BottomBar";
 import styles from "./LoginStyles";
