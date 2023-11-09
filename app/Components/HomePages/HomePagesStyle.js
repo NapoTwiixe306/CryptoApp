@@ -4,7 +4,6 @@ const styles = StyleSheet.create({
   parent: {
     paddingTop: 15,
     flex: 1,
-    alignItems: "center",
   },
   container: {
     margin: 15,
@@ -21,6 +20,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 25,
     fontWeight: "bold",
-  },
+    paddingHorizontal: 8
+  }
 });
 export default styles;
