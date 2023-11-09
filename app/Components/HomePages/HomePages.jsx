@@ -13,7 +13,7 @@ export default function HomePages() {
             <Text style={styles.title}>CryptoExtension</Text>
           </View>
         </View>
-        <HorizontalCard/>
+        <HorizontalCard />
       </ScrollView>
       <BottomBar />
     </>

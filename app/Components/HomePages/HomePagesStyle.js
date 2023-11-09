@@ -10,17 +10,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     padding: 15,
-    backgroundColor: "red",
+    backgroundColor: "#CAD5E2",
     height: 200,
     width: 380,
     borderRadius: 15,
     shadowColor: "white",
   },
   title: {
-    color: "white",
+    color: "black",
     fontSize: 25,
     fontWeight: "bold",
-    paddingHorizontal: 8
-  }
+    paddingHorizontal: 8,
+  },
 });
 export default styles;

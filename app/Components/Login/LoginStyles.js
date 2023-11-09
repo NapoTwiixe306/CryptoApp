@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
     top: 50,
   },
   text: {
-    color: 'white'
-  }
+    color: "white",
+  },
 });
 
 export default styles;
