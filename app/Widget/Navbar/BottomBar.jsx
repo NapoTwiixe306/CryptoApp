@@ -31,14 +31,7 @@ export default function BottomBar() {
           <Text style={styles.tabText}>Login</Text>
         </View>
       </Link>
-      <Link style={styles.tab} href="/Components/Notifications/Notifications">
-        <View
-          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-        >
-          <FontAwesome name="bell" size={24} style={styles.icon} />
-          <Text style={styles.tabText}>Message</Text>
-        </View>
-      </Link>
+
       <Link style={styles.tab} href="/Components/Settings/Settings">
         <View
           style={{ flex: 1, alignItems: "center", justifyContent: "center" }}

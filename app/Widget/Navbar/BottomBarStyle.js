@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   tabText: {
-    marginLeft: 15,
+    marginLeft: 30,
     color: "black",
     textAlign: "center",
   },
   icon: {
-    marginLeft: 15,
+    marginLeft: 30,
     color: "black",
     fontSize: 24,
     justifyContent: "center", // Centrer l'icône verticalement dans son conteneur
