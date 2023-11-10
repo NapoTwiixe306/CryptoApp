@@ -10,10 +10,15 @@ export default function HomePages() {
       <ScrollView style={styles.scrollContainer}>
         <View style={styles.parent}>
           <View style={styles.container}>
-            <Text style={styles.title}>CryptoExtension</Text>
+            <Text style={styles.title}>Title + Images</Text>
           </View>
         </View>
         <HorizontalCard />
+        <View style={styles.parent}>
+          <View style={styles.container}>
+            <Text style={styles.title}>CryptoBank + Card</Text>
+          </View>
+        </View>
       </ScrollView>
       <BottomBar />
     </>

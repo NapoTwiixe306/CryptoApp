@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     height: 80,
-    backgroundColor: "white",
+    backgroundColor: "#CAD5E2",
     position: "absolute",
     bottom: 0,
     left: 0,
@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   tabText: {
-    marginLeft: 30,
+    marginLeft: 15,
     color: "black",
     textAlign: "center",
   },
   icon: {
-    marginLeft: 30,
+    marginLeft: 15,
     color: "black",
     fontSize: 24,
     justifyContent: "center", // Centrer l'icône verticalement dans son conteneur
